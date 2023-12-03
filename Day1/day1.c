@@ -13,7 +13,7 @@ int main(){
     int sum=0;
     while(fscanf(fp,"%s",line)==1){
         int length=strnlen(line,100);
-        char num[3] = {'\0','\0','\n'};
+        char num[3] = {'0','0','\0'};
         // part 1
         // int i=0;
         // for(;i<length;i++){
@@ -150,6 +150,8 @@ int main(){
                 num[1]='9';
         }
         int temp=atoi(num);
+        num[0]='0';
+        num[1]='0';
         sum+=temp;
         printf("%d %s %s\n",num[0],line,linerev);
     }
